@@ -1,0 +1,192 @@
+agents:
+  - id: melva
+    name: MELVA
+    role: Executive orchestration and system leadership
+    team: core
+    workspace: workspace
+    provider: codex
+    talks_to:
+      - sales
+      - engineering
+      - delivery
+      - customersuccess
+      - operations
+      - intelligence
+      - automation
+
+  - id: sales
+    name: Sales Team
+    role: Revenue coordination and outbound execution
+    team: sales
+    workspace: workspace-sales
+    provider: codex
+    talks_to:
+      - melva
+      - prospector
+      - researcher
+      - copywriter
+      - strategist
+      - delivery
+      - customersuccess
+      - intelligence
+
+  - id: prospector
+    name: Prospector
+    role: Lead sourcing and qualification
+    team: sales
+    workspace: workspace-prospector
+    provider: codex
+    talks_to:
+      - sales
+      - researcher
+      - strategist
+
+  - id: researcher
+    name: Researcher
+    role: Account, market, and evidence research
+    team: sales
+    workspace: workspace-researcher
+    provider: codex
+    talks_to:
+      - sales
+      - prospector
+      - copywriter
+      - strategist
+      - intelligence
+      - engineering
+
+  - id: copywriter
+    name: Copywriter
+    role: Outbound and offer messaging
+    team: sales
+    workspace: workspace-copywriter
+    provider: codex
+    talks_to:
+      - sales
+      - researcher
+      - strategist
+
+  - id: strategist
+    name: Strategist
+    role: Commercial planning and prioritization
+    team: sales
+    workspace: workspace-strategist
+    provider: codex
+    talks_to:
+      - sales
+      - prospector
+      - researcher
+      - copywriter
+      - melva
+      - intelligence
+      - delivery
+
+  - id: engineering
+    name: Engineering
+    role: Systems, integrations, and implementation
+    team: core
+    workspace: workspace-engineering
+    provider: codex
+    talks_to:
+      - melva
+      - researcher
+      - delivery
+      - voicearchitect
+      - automation
+      - systembuilder
+      - intelligence
+
+  - id: delivery
+    name: Delivery
+    role: Client execution and handoff coordination
+    team: core
+    workspace: workspace-delivery
+    provider: codex
+    talks_to:
+      - melva
+      - sales
+      - strategist
+      - engineering
+      - voicearchitect
+      - customersuccess
+      - operations
+
+  - id: voicearchitect
+    name: Voice Architect
+    role: Voice and conversational experience design
+    team: delivery
+    workspace: workspace-voicearchitect
+    provider: codex
+    talks_to:
+      - delivery
+      - engineering
+      - customersuccess
+
+  - id: customersuccess
+    name: Customer Success
+    role: Customer retention and outcome protection
+    team: core
+    workspace: workspace-customersuccess
+    provider: codex
+    talks_to:
+      - melva
+      - sales
+      - delivery
+      - voicearchitect
+      - operations
+      - intelligence
+
+  - id: operations
+    name: Operations
+    role: Process, cadence, and operating stability
+    team: core
+    workspace: workspace-operations
+    provider: codex
+    talks_to:
+      - melva
+      - delivery
+      - customersuccess
+      - intelligence
+      - automation
+      - systembuilder
+
+  - id: intelligence
+    name: Intelligence
+    role: Cross-team memory, synthesis, and insight
+    team: core
+    workspace: workspace-intelligence
+    provider: codex
+    talks_to:
+      - melva
+      - sales
+      - researcher
+      - strategist
+      - engineering
+      - customersuccess
+      - operations
+      - automation
+
+  - id: automation
+    name: Automation
+    role: Workflow automation and orchestration plumbing
+    team: core
+    workspace: workspace-automation
+    provider: codex
+    talks_to:
+      - melva
+      - engineering
+      - operations
+      - intelligence
+      - systembuilder
+
+  - id: systembuilder
+    name: System Builder
+    role: Foundational platform and system scaffolding
+    team: automation
+    workspace: workspace-systembuilder
+    provider: codex
+    talks_to:
+      - engineering
+      - operations
+      - automation
+      - melva
