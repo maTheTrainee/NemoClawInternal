@@ -1,0 +1,27 @@
+{
+  "skills": {
+    "entries": {
+      "notion": {
+        "enabled": true,
+        "apiKey": { "source": "env", "provider": "default", "id": "NOTION_API_KEY" }
+      },
+      "agentmail": {
+        "enabled": true
+      },
+      "supermemory": {
+        "enabled": true
+      },
+      "self-improvement": {
+        "enabled": true
+      }
+    }
+  },
+  "secrets": {
+    "providers": {
+      "default": { "source": "env" }
+    },
+    "defaults": {
+      "env": "default"
+    }
+  }
+}
