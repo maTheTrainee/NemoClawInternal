@@ -124,6 +124,7 @@ main() {
   bash "${REPO_ROOT}/scripts/setup-melva-workspaces.sh"
   copy_shared_skills
   copy_config_examples
+  log "Direct Codex route available via scripts/start-melva-codex-route.sh and scripts/activate-melva-codex-route.sh"
   log "Running MELVA verification"
   bash "${REPO_ROOT}/scripts/verify-melva.sh"
   log "Done"

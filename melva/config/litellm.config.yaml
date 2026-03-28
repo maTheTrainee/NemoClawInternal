@@ -1,0 +1,11 @@
+model_list:
+  - model_name: openai-codex/gpt-5.3-codex
+    litellm_params:
+      model: gpt-5.3-codex
+      api_base: os.environ/CODEX_BRIDGE_BASE_URL
+      api_key: os.environ/CODEX_BRIDGE_KEY
+
+litellm_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+  drop_params: true
+  set_verbose: false
