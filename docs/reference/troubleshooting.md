@@ -131,6 +131,12 @@ On DGX machines, sandbox creation can fail if the gateway's DNS has not finished
 Run `nemoclaw onboard` to retry.
 The wizard cleans up stale port forwards and waits for gateway readiness automatically.
 
+### `sudo` onboarding succeeds, but `nemoclaw` still cannot find the sandbox
+
+If `openshell sandbox list` shows the sandbox as ready and `openshell status` shows the gateway as connected, but `nemoclaw list` still shows no registered sandboxes, the onboard flow likely completed under `sudo` without updating the normal user's local NemoClaw registry.
+
+Follow [Recover After sudo Onboarding](onboarding-recovery.md).
+
 ### Colima socket not detected (macOS)
 
 Newer Colima versions use the XDG base directory (`~/.config/colima/default/docker.sock`) instead of the legacy path (`~/.colima/default/docker.sock`).

@@ -195,6 +195,8 @@ The blueprint lifecycle follows four stages: resolve the artifact, verify its di
 
 When something goes wrong, errors may originate from either NemoClaw or the OpenShell layer underneath. Run `nemoclaw <name> status` for NemoClaw-level health and `openshell sandbox list` to check the underlying sandbox state.
 
+If onboarding only works under `sudo`, but `nemoclaw` still cannot find the sandbox afterward, see [Recover After sudo Onboarding](docs/reference/onboarding-recovery.md).
+
 ---
 
 ## Inference
