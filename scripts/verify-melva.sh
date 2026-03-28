@@ -57,6 +57,26 @@ main() {
   check_file "${TARGET_SHARED_SKILLS}/self-improvement/SKILL.md"
   check_file "${TARGET_SHARED_SKILLS}/supermemory/SKILL.md"
 
+  for ws in \
+    workspace-sales \
+    workspace-prospector \
+    workspace-researcher \
+    workspace-copywriter \
+    workspace-strategist \
+    workspace-engineering \
+    workspace-delivery \
+    workspace-voicearchitect \
+    workspace-customersuccess \
+    workspace-operations \
+    workspace-intelligence \
+    workspace-automation \
+    workspace-systembuilder; do
+    check_dir "${TARGET_OPENCLAW_HOME}/${ws}"
+    check_file "${TARGET_OPENCLAW_HOME}/${ws}/SOUL.md"
+    check_file "${TARGET_OPENCLAW_HOME}/${ws}/AGENTS.md"
+    check_file "${TARGET_OPENCLAW_HOME}/${ws}/IDENTITY.md"
+  done
+
   for bin in clawhub gh tmux mcporter jq rg ffmpeg summarize nano-pdf himalaya gifgrep claude codex; do
     check_bin "${bin}"
   done

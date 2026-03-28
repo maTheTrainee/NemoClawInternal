@@ -120,6 +120,8 @@ main() {
   install_himalaya
   install_gifgrep
   copy_workspace_base
+  log "Seeding MELVA team workspaces"
+  bash "${REPO_ROOT}/scripts/setup-melva-workspaces.sh"
   copy_shared_skills
   copy_config_examples
   log "Running MELVA verification"
